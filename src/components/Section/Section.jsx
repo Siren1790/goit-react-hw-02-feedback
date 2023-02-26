@@ -1,8 +1,16 @@
+import React from 'react';
+import PropTypes from 'prop-types';
+import { SectionWrap, Title } from './Section.module';
 export const Section = ({tittle, children}) => {
     return (
-        <div>
-            <h2>{tittle}</h2>
+        <SectionWrap>
+            <Title>{tittle}</Title>
             {children}
-        </div>
+        </SectionWrap>
     )
 }
+
+Section.propTypes = {
+    tittle: PropTypes.string.isRequired,
+    children: PropTypes.node.isRequired,
+  };
